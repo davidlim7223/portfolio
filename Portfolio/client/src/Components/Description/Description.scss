@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,500;1,400&family=Xanh+Mono&display=swap');
+.textChange {
+  color: #30D5C8;
+  font-family: 'poppins', sans-serif;
+  font-size: 30px;
+}
+
+.element {
+  color: orange;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 45px;
+}
+
+.staticText {
+  color: #30D5C8;
+  font-family: 'poppins', sans-serif;
+  font-size: 30px;
+}
+
+.name {
+  // color: #CC5500;
+  color: orange;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 45px;
+}
+
+.textWrapper {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-left: 20vw;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+
+.rocket {
+  float: left;
+  position: relative;
+  top: 30vh;
+  left: 60vw;
+  &:hover {
+    animation: animate 0.2s ease infinite;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -162px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 170px;
+      background: linear-gradient(#00d0ff, transparent)
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -162px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 170px;
+      background: linear-gradient(#00d0ff, transparent);
+      filter: blur(20px);
+    }
+  }
+}
+
+i {
+  position: absolute;
+  top: -250px;
+  background: rgba(255, 255, 255, 0.5);
+  animation: animateStars linear infinite;
+}
+
+@keyframes animateStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(150vh);
+  }
+}
+
+.rocketPng {
+  height: 30vh;
+  width: 10vw;
+  min-height: 180px;
+  min-width: 140px;
+  display: block;
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
