@@ -17,8 +17,14 @@
   font-size: 30px;
 }
 
+#starWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
 .name {
-  // color: #CC5500;
   color: orange;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 45px;
@@ -35,9 +41,10 @@
 
 .rocket {
   float: left;
-  position: relative;
-  top: 30vh;
+  position: fixed;
+  top: 35vh;
   left: 60vw;
+  z-index: 5;
   &:hover {
     animation: animate 0.2s ease infinite;
     &:before {
@@ -61,12 +68,16 @@
       background: linear-gradient(#00d0ff, transparent);
       filter: blur(20px);
     }
+    &:hover i {
+      visibility: visible;
+    }
   }
 }
 
 i {
+  visibility: hidden;
+  z-index: -1;
   position: absolute;
-  top: -250px;
   background: rgba(255, 255, 255, 0.5);
   animation: animateStars linear infinite;
 }

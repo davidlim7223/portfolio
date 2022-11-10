@@ -10,7 +10,7 @@ class Description extends React.Component {
 
   componentDidMount() {
     var options = {
-      strings: ['Software Developer', 'Aerospace Engineer', 'Problem Solver', 'Powerlifter'],
+      strings: ['Software Developer', 'Aerospace Engineer', 'Problem Solver', 'Critical Thinker', 'Power Lifter'],
       loop: true,
       typeSpeed: 100,
       backSpeed: 80,
@@ -20,14 +20,16 @@ class Description extends React.Component {
     var typed = new Typed('.element', options);
 
     var stars = () => {
-      let count = 20;
-      let $bg = $('#bodyWrapper');
-      for (var i = 0; i < count; i ++) {
-        let x = Math.floor(Math.random() * window.innerWidth);
-        let y = Math.random() * 100 + 50;
-        let duration = Math.random();
-        let $newStar = $(`<i style="left:${x}px;width:1px;height:${y}px;animation-duration:${duration}s"></i>`);
-        $bg.append($newStar);
+      let count = 40;
+      let $starWrapper = $('#starWrapper');
+      for (var i = 1; i <= count; i ++) {
+        let x = Math.floor(Math.random() * window.innerWidth) - $starWrapper.offset().left;
+        let y = -$starWrapper.offset().top;
+        let height = Math.random() * 100 + 50;
+        let duration = Math.random() * 0.8 + 0.2;
+        let $newStar = $(`<i style="left:${x}px;top:${y}px;width:1px;
+          height:${height}px;animation-duration:${duration}s"></i>`);
+        $starWrapper.append($newStar);
       }
     }
     stars();
@@ -38,9 +40,11 @@ class Description extends React.Component {
       <>
         <div className="textWrapper">
           <h2 className='staticText'>I'm <span className='name'>David Lim</span> and</h2>
+          <br></br> <br></br>
           <h1 className='textChange'>I'm a <span className='element'></span></h1>
         </div>
         <div className='rocket'>
+          <div id="starWrapper"></div>
           <img src='/rocket.png' className='rocketPng'></img>
         </div>
       </>

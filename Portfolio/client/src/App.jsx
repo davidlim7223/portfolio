@@ -4,6 +4,7 @@ import axios from "axios";
 import Description from "./Components/Description/Description.jsx";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from "./Components/Navbar/Navbar.jsx";
+import AboutMe from "./Components/AboutMe/AboutMe.jsx";
 import './App.scss';
 
 class App extends React.Component {
@@ -15,11 +16,10 @@ class App extends React.Component {
     return (
       <BrowserRouter>
       <Navbar />
-      <div id="bodyWrapper">
         <Routes>
           <Route path="/" element={<Description />} />
+          <Route path="/aboutMe" element={<AboutMe />} />
         </Routes>
-      </div>
       </BrowserRouter>
     )
   }
