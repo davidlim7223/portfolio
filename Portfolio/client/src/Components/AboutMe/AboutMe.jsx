@@ -7,7 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const AboutMe = () => {
   return (
-    <div className="about-wrapper">
+    <div id="about-wrapper" className="about-wrapper">
       <div className="about-left">
         <div className="about-left-content">
           <div>
@@ -39,8 +39,8 @@ const AboutMe = () => {
         </div>
 
         <div className="about-para">
-          <p>I'm a software developer experienced in working with React, Javascript, HTML, CSS, PostgreSQL, and MongoDB.</p>
-          <p> I am an Aerospace Engineer and a motivated learner who stumbled upon my passion of web development through past internships.</p>
+          <p>I'm a full stack web developer experienced in working with React, Javascript, HTML, CSS, PostgreSQL, and MongoDB.</p>
+          <p> I am an Aerospace Engineering graduate and a motivated learner who stumbled upon my passion of web development through past internships.</p>
           <p>I desire to dive deeper into the world of software engineering and would love to work at a company that can grant me opportunities to do so!</p>
         </div>
       </div>

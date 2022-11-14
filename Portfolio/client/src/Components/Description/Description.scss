@@ -1,20 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,500;1,400&family=Xanh+Mono&display=swap');
+
 .textChange {
   color: #30D5C8;
   font-family: 'poppins', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
+}
+
+.description {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
 
 .element {
-  color: orange;
+  color: red;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 45px;
+  font-size: 60px;
 }
 
 .staticText {
   color: #30D5C8;
   font-family: 'poppins', sans-serif;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 #starWrapper {
@@ -27,23 +38,23 @@
 .name {
   color: orange;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 45px;
+  font-size: 60px;
 }
 
 .textWrapper {
   display: flex;
   position: absolute;
   flex-direction: column;
-  margin-left: 20vw;
+  margin-left: 10vw;
   top: 50vh;
   transform: translateY(-50%);
 }
 
 .rocket {
   float: left;
-  position: fixed;
+  position: relative;
   top: 35vh;
-  left: 60vw;
+  left: 65vw;
   z-index: 5;
   &:hover {
     animation: animate 0.2s ease infinite;
@@ -72,6 +83,7 @@
       visibility: visible;
     }
   }
+  // transform: scaleY(-1);
 }
 
 i {

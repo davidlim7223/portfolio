@@ -9,6 +9,8 @@ class Description extends React.Component {
   }
 
   componentDidMount() {
+    var $desc = $('.description');
+    $desc[0].style.backgroundImage = "url('/space3.jpg')";
     var options = {
       strings: ['Software Developer', 'Aerospace Engineer', 'Problem Solver', 'Critical Thinker', 'Power Lifter'],
       loop: true,
@@ -27,7 +29,7 @@ class Description extends React.Component {
         let y = -$starWrapper.offset().top;
         let height = Math.random() * 100 + 50;
         let duration = Math.random() * 0.8 + 0.2;
-        let $newStar = $(`<i style="left:${x}px;top:${y}px;width:1px;
+        let $newStar = $(`<i style="left:${x}px;top:${y}px;width:2px;
           height:${height}px;animation-duration:${duration}s"></i>`);
         $starWrapper.append($newStar);
       }
@@ -37,17 +39,19 @@ class Description extends React.Component {
 
   render () {
     return (
-      <>
+      <div className="description">
         <div className="textWrapper">
           <h2 className='staticText'>I'm <span className='name'>David Lim</span> and</h2>
           <br></br> <br></br>
           <h1 className='textChange'>I'm a <span className='element'></span></h1>
         </div>
-        <div className='rocket'>
-          <div id="starWrapper"></div>
-          <img src='/rocket.png' className='rocketPng'></img>
-        </div>
-      </>
+        <a className='transition' href="#about-wrapper">
+          <div className='rocket'>
+            <div id="starWrapper"></div>
+            <img src='/rocket.png' className='rocketPng'></img>
+          </div>
+        </a>
+      </div>
     )
   }
 }

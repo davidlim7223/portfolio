@@ -1,11 +1,13 @@
 .nav {
   display: flex;
+  position: fixed;
   flex-direction: row;
   width: 100vw;
   background-color: #30D5C8;
   &h1 {
     margin: 0px;
   }
+  z-index: 100;
 }
 .nav ul {
   margin: 10px;

@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  min-width: 100px;
+}
+
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+  > label {
+    background: -webkit-linear-gradient(orange, rgb(221, 52, 221));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  > input, textarea{
+    font-size: 25px;
+  }
+}
+
+.title {
+  background: -webkit-linear-gradient(orange, rgb(221, 52, 221));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#message {
+  height: 200px;
+}
+
+.contact {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mt-5 {
+  display: flex;
+  justify-content: center;
+}
