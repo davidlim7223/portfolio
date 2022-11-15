@@ -34,7 +34,12 @@ class Description extends React.Component {
         $starWrapper.append($newStar);
       }
     }
-    stars();
+    var rocket = $('.rocket')[0];
+    rocket.onmouseenter = () => {stars()};
+    rocket.onmouseleave = () => {
+      let $starWrapper = $('#starWrapper');
+      $starWrapper.empty();
+    }
   }
 
   render () {
@@ -45,12 +50,10 @@ class Description extends React.Component {
           <br></br> <br></br>
           <h1 className='textChange'>I'm a <span className='element'></span></h1>
         </div>
-        <a className='transition' href="#about-wrapper">
-          <div className='rocket'>
-            <div id="starWrapper"></div>
-            <img src='/rocket.png' className='rocketPng'></img>
-          </div>
-        </a>
+        <div className='rocket'>
+          <div id="starWrapper"></div>
+          <img src='/rocket.png' className='rocketPng'></img>
+        </div>
       </div>
     )
   }

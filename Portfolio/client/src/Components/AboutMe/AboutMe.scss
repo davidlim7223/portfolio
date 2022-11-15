@@ -9,7 +9,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .about-wrapper{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 .about-left{
@@ -19,7 +19,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     color:#fff
 }
 .about-left-content > div{
@@ -98,7 +98,7 @@ body{
 }
 .about-right{
     background: #12192c;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

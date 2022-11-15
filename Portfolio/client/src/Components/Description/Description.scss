@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,500;1,400&family=Xanh+Mono&display=swap');
 
-.textChange {
-  color: #30D5C8;
-  font-family: 'poppins', sans-serif;
-  font-size: 50px;
-}
-
 .description {
   display: flex;
   position: relative;
@@ -13,19 +7,20 @@
   height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: 100vw;
+  background-size: cover;
 }
 
 .element {
   color: red;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 60px;
+  font-size: clamp(2rem, 1rem + 10vw, 5rem);
 }
 
-.staticText {
+.staticText, .textChange {
   color: #30D5C8;
   font-family: 'poppins', sans-serif;
-  font-size: 50px;
+  font-size: clamp(1.5rem, 0.5rem + 10vw, 3rem);
+  font-weight: lighter;
 }
 
 #starWrapper {
@@ -38,24 +33,25 @@
 .name {
   color: orange;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 60px;
+  font-size: clamp(2rem, 1rem + 10vw, 5rem);
 }
 
 .textWrapper {
   display: flex;
   position: absolute;
   flex-direction: column;
-  margin-left: 10vw;
   top: 50vh;
   transform: translateY(-50%);
+  padding-left: 5vw;
+  z-index: 1;
 }
 
 .rocket {
-  float: left;
-  position: relative;
+  justify-self: center;
   top: 35vh;
-  left: 65vw;
-  z-index: 5;
+  left: 64vw;
+  position: absolute;
+  z-index: 0;
   &:hover {
     animation: animate 0.2s ease infinite;
     &:before {
@@ -83,7 +79,6 @@
       visibility: visible;
     }
   }
-  // transform: scaleY(-1);
 }
 
 i {
@@ -117,5 +112,17 @@ i {
   }
   50% {
     transform: translateY(2px);
+  }
+}
+
+@media (max-width: 763px) {
+  //1150px
+  .textWrapper {
+    top: 35vh;
+  }
+  .rocket {
+    top: 60vh;
+    left: 40vw;
+    // transform: translateX(-50%);
   }
 }
