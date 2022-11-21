@@ -1,19 +1,19 @@
 import React from 'react';
 import './AboutMe.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 const AboutMe = () => {
   return (
-    <div id="about-wrapper" className="about-wrapper">
+    <div id="about-wrapper" className="about-wrapper" id="aboutMe">
       <div className="about-left">
         <div className="about-left-content">
           <div>
             <div className="shadow">
               <div className="about-img">
-                <img src="/photo.jpg" alt="about image" />
+                <img src="/grad.jpg" alt="about image" />
               </div>
             </div>
 
@@ -22,7 +22,7 @@ const AboutMe = () => {
           </div>
 
           <ul className="icons">
-            <a href="https://www.facebook.com/profile.php?id=100004495625767"><li><FontAwesomeIcon icon={faFacebookF} /></li></a>
+            <a href="mailto:limdh1998@gmail.com"><li><FontAwesomeIcon icon={faEnvelope} /></li></a>
             <a href="https://www.linkedin.com/in/davidlim7223/"><li><FontAwesomeIcon icon={faLinkedin} /></li></a>
             <a href="https://github.com/davidlim7223"><li><FontAwesomeIcon icon={faGithub} /></li></a>
           </ul>

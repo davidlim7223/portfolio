@@ -6,9 +6,26 @@
   color: white;
   display: flex;
   justify-content: center;
+  font-size: 3rem;
 }
 
 #experience {
+  padding: 8vh;
   position: relative;
   background-image: linear-gradient(19deg, #B721FF 0%, #21D4FD 100%);
+}
+
+.vertical-timeline-element-content {
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 1169px) {
+  .dates {
+    color: black;
+  }
+  .indicator {
+    justify-content: left !important;
+  }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Outlet,Link } from "react-router-dom";
 import './Navbar.scss';
 import Tooltip from '@mui/material/Tooltip';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
@@ -8,45 +7,46 @@ import BadgeIcon from '@mui/icons-material/Badge';
 import HomeIcon from '@mui/icons-material/Home';
 import FolderIcon from '@mui/icons-material/Folder';
 import WorkIcon from '@mui/icons-material/Work';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 
 const Navbar = () => {
   return (
     <nav className='nav'>
       <ul className='navList'>
         <li>
-          <Link to='/'>
-            <Tooltip title="Home" placement="bottom" arrow>
+          <a href="#desc">
+            <Tooltip title={<h2>Home</h2>} placement="bottom" arrow>
               <HomeIcon fontSize="large" color="action" sx={{ '&:hover': {color: "orange"} }}/>
             </Tooltip>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to='/aboutMe'>
-            <Tooltip title="About Me" placement="bottom" arrow>
+          <a href='#aboutMe'>
+            <Tooltip title={<h2>About Me</h2>} placement="bottom" arrow>
               <BadgeIcon fontSize="large" color="action" sx={{ '&:hover': {color: "orange"} }}/>
             </Tooltip>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to='/experience'>
-            <Tooltip title="Work Experience" placement="bottom" arrow>
+          <a href='#experience'>
+            <Tooltip title={<h2>Work Experience</h2>} placement="bottom" arrow>
               <WorkIcon fontSize="large" color="action" sx={{ '&:hover': {color: "orange"} }}/>
             </Tooltip>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to='/personalProject'>
-            <Tooltip title="Personal Projects" placement="bottom" arrow>
-              <FolderIcon fontSize="large" color="action" sx={{ '&:hover': {color: "orange"} }}/>
+          <a href='#funFacts'>
+            <Tooltip title={<h2>Fun Facts</h2>} placement="bottom" arrow>
+              <LightbulbIcon fontSize="large" color="action" sx={{ '&:hover': {color: "orange"} }}/>
             </Tooltip>
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to='/contactMe'>
-            <Tooltip title="Contact Me" placement="bottom" arrow>
+          <a href='#contact'>
+            <Tooltip title={<h2>Contact Me</h2>} placement="bottom" arrow>
               <ContactMailIcon fontSize="large" color="action" sx={{ '&:hover': {color: "orange"} }}/>
             </Tooltip>
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>

@@ -5,11 +5,13 @@ import React from 'react';
 import ComputerIcon from '@mui/icons-material/Computer';
 import SchoolIcon from '@mui/icons-material/School';
 import StarIcon from '@mui/icons-material/Star';
+
 const Timeline = () => {
   return (
     <div id='experience'>
-      <h1 className='timeline'>Work Experiences</h1>
+      <h1 className='timeline'>WORK EXPERIENCES</h1>
       <br></br>
+      <h2 className='indicator' style={{display: 'flex', justifyContent: 'center'}}>RECENT</h2>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -109,6 +111,7 @@ const Timeline = () => {
           icon={<StarIcon />}
         />
       </VerticalTimeline>
+      <h2 className='indicator' style={{display: 'flex', justifyContent: 'center'}}>START</h2>
     </div>
   )
 }

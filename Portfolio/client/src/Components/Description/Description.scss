@@ -3,8 +3,8 @@
 .description {
   display: flex;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,7 +91,7 @@ i {
 
 @keyframes animateStars {
   0% {
-    transform: translateY(0);
+    transform: translateY(-100vh);
   }
   100% {
     transform: translateY(150vh);
@@ -116,13 +116,11 @@ i {
 }
 
 @media (max-width: 763px) {
-  //1150px
   .textWrapper {
     top: 35vh;
   }
   .rocket {
     top: 60vh;
-    left: 40vw;
-    // transform: translateX(-50%);
+    left: calc(50vw - 70px);
   }
 }

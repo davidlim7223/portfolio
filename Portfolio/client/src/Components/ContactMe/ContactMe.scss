@@ -1,26 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,500;1,400&family=Xanh+Mono&display=swap');
+
 .container {
   display: flex;
-  min-width: 100px;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 8vh;
+  background-size: cover;
 }
 
 .mb-3 {
   display: flex;
   flex-direction: column;
   > label {
-    background: -webkit-linear-gradient(orange, rgb(221, 52, 221));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: black;
+    // background: -webkit-linear-gradient(19deg,black, #30D5C8);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    font-family: 'poppins', sans-serif;
   }
 
   > input, textarea{
-    font-size: 25px;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    font-family: 'poppins', sans-serif;
+    border-color: white;
   }
 }
 
 .title {
-  background: -webkit-linear-gradient(orange, rgb(221, 52, 221));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #30D5C8;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2em;
+  // background: -webkit-linear-gradient(orange, rgb(221, 52, 221));
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
 }
 
 #message {
@@ -33,9 +46,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  top: 50vh;
+  // transform: translateY(-50%);
 }
 
 .mt-5 {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 50%;
+  margin: 5vh;
+}
+
+.btnWrapper {
   display: flex;
   justify-content: center;
 }

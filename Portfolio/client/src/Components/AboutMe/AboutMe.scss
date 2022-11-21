@@ -24,10 +24,15 @@ body{
 }
 .about-left-content > div{
     background: #12192c;
-    padding: 4rem 4rem 1.5rem 5rem;
+    padding: 4rem 4rem 1.5rem 4rem;
     text-align: center;
-
     border-radius: 12px 12px 0 0;
+}
+.email {
+    >svg {
+        top: 500%;
+        translate: transformY(-50%);
+    }
 }
 .about-left-content{
     box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
@@ -38,11 +43,13 @@ body{
 }
 .about-img img{
     display: block;
-    width: 200px;
+    width: 100%;
+    width: 100%;
 }
 .about-img{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
     overflow: hidden;
     border-radius: 50%;
     transition: all 0.5s ease-in-out;
@@ -51,8 +58,10 @@ body{
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 0;
+    max-width: 200px;
+    padding-bottom: min(100%, 200px);
 }
 
 
