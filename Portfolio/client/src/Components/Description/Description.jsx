@@ -6,6 +6,9 @@ import $ from 'jquery';
 class Description extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      pressed: true
+    }
   }
 
   componentDidMount() {
@@ -18,6 +21,27 @@ class Description extends React.Component {
     };
 
     var typed = new Typed('.element', options);
+
+    var press = () => {
+      let pressed = this.state.pressed;
+      let $rocket = $('#rocketWrapper');
+      let $button = $('#button');
+      if (pressed) {
+        $rocket.removeClass('launch');
+        let $starWrapper = $('#starWrapper');
+        $starWrapper.empty();
+        $button.removeClass('pressed');
+        $button.addClass('notPressed');
+        $button.text('LAUNCH');
+      } else {
+        $rocket.addClass('launch');
+        $button.addClass('pressed');
+        $button.removeClass('notPressed');
+        $button.text('LAND');
+        stars();
+      }
+      this.setState({pressed: !pressed})
+    }
 
     var stars = () => {
       let count = 40;
@@ -32,12 +56,15 @@ class Description extends React.Component {
         $starWrapper.append($newStar);
       }
     }
-    var rocket = $('.rocket')[0];
-    rocket.onmouseenter = () => {stars()};
-    rocket.onmouseleave = () => {
-      let $starWrapper = $('#starWrapper');
-      $starWrapper.empty();
-    }
+    stars();
+    // var rocket = $('.rocket')[0];
+    // rocket.onmouseenter = () => {stars()};
+    // rocket.onmouseleave = () => {
+    //   let $starWrapper = $('#starWrapper');
+    //   $starWrapper.empty();
+    // }
+    var $button = $('#button');
+    $button.click(() => {press()});
   }
 
   render () {
@@ -48,9 +75,14 @@ class Description extends React.Component {
           <br></br> <br></br>
           <h1 className='textChange'>I'm a <span className='element'></span></h1>
         </div>
-        <div className='rocket'>
+        <div id='rocket' className='rocket'>
+          <div className='launchButton'>
+            <button id="button" className='pressed'><span>LAND</span></button>
+          </div>
           <div id="starWrapper"></div>
-          <img src='/rocket.png' className='rocketPng'></img>
+          <div id="rocketWrapper" className="launch">
+            <img src='/rocket.png' id='rocketPng' className='rocketPng'></img>
+          </div>
         </div>
       </div>
     )
